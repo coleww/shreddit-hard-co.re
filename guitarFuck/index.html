@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>Guitar - to - Brainfuck</title>
+<style>
+  #note { font-size: 164px; }
+  #note { display: inline-block; height:180px; text-align: left;}
+  #output { width: 300px; height: 42px; }
+  #flat { display: none; }
+  #sharp { display: none; }
+  .flat #flat { display: inline; }
+  .sharp #sharp { display: inline; }
+  .brainfuck {border: 1px solid black;}
+</style>
+
+</head>
+  <body>
+    <table xmlns="http://www.w3.org/1999/xhtml" class="noborder">
+		<tbody><span id="steps"></span><span id="memory"></span><span id="code"></span><span id="step"></span><span id="run"></span><span id="pause"></span>
+			<div id="input"></div>
+			<tr>
+				<td><label for="output">Output:</label></td>
+				<td><textarea id="output" cols="50" rows="4" readonly="readonly" style="width:40em; height:4em"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" class="runit"  >DO IT</input> 
+				</td>
+			</tr>
+		
+		</tbody>
+	</table>
+	
+<pre>	
+BRAIN_FUCK_MAP = {
+  "A": ">",
+  "B": "<",
+  "C": "[",
+  "D": ",",
+  "E": "+",
+  "F": "-",
+  "G": ".",
+  };
+
+
+ARE U A BAD ENOUGH SHREDDER TO PERFORM HELLO WORLD? 
+
+++++++++++[>+++++++>++++++++++>+++>++++<
+<<<-]>++.>+.+++++++..+++.>>++++.<++.<+++
++++++.--------.+++.------.--------.>+.
+
+
+</pre>
+    <script src="jquery.js"></script>
+    <script src="brainfuck.js"></script>
+    <script src="pitchdetect.js"></script>
+    <div class="note"><span id="note">--</span></div>
+    <span class="brainfuck">&nbsp;</span>
+  </body>
+</html>
+
